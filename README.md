@@ -1,93 +1,69 @@
-# 🌱 Baldosa Inteligente para Micro-Generación y Monitoreo Energético
+# React + TypeScript + Vite
 
-Este proyecto propone el **diseño y prototipado de una baldosa piezoeléctrica** capaz de generar energía limpia a partir de las pisadas en espacios de alto tráfico. La iniciativa busca transformar una acción cotidiana como caminar en una **fuente de energía renovable**, combinando generación eléctrica con **monitoreo en tiempo real** y aplicaciones educativas en el marco de las **ciudades inteligentes**.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
----
+Currently, two official plugins are available:
 
-## ⚡ Objetivo del Proyecto
-Desarrollar e implementar un **prototipo piloto** que:
-- Convierta la energía mecánica de las pisadas en **electricidad utilizable**.
-- Permita **almacenar y gestionar energía** para alimentar cargas de baja potencia (LEDs, sensores, puertos USB de emergencia).
-- Ofrezca **telemetría en tiempo real** (conteo de pisadas, energía acumulada, estado del sistema).
-- Sirva como herramienta de **concientización ambiental** y demostración tecnológica en espacios públicos.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
----
+## Expanding the ESLint configuration
 
-## 🔧 Arquitectura del Sistema
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-- **Entrada (Piezoeléctrico):** capta la energía mecánica de las pisadas → señales AC.  
-- **Gestión de Energía:** rectificación, filtrado y conversión mediante PMIC → almacenamiento en supercondensador/batería.  
-- **Unidad de Control (ESP32):**  
-  - Medición de variables eléctricas (voltaje, corriente).  
-  - Conteo de pisadas y procesamiento de datos.  
-  - Comunicación inalámbrica (Wi-Fi / BLE).  
-- **Sensores adicionales:** posibilidad de integrar temperatura, humedad u otros.  
-- **Salidas:** LEDs indicadores y puerto USB de baja potencia.  
+```js
+export default tseslint.config([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
----
+      // Remove tseslint.configs.recommended and replace with this
+      ...tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      ...tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      ...tseslint.configs.stylisticTypeChecked,
 
-## 📊 Entradas y Salidas del Sistema
-### Entradas
-- **Pisadas humanas:** fuerza/impulso sobre la superficie.  
-- **Señales eléctricas:** pulsos AC de piezoeléctricos, alimentación al microcontrolador.  
-- **Operativas:** botón de cambio de fase.  
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
 
-### Salidas
-- **Energía utilizable:** alimentación puntual de LEDs, sensores o USB de emergencia.  
-- **Datos y telemetría:** número de pisadas, energía generada/acumulada, estado del sistema.  
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
----
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-## 🏗️ Restricciones Tecnológicas
-- **Portabilidad:** baldosa modular de 30×30 cm.  
-- **Energía:** generación intermitente y baja potencia → necesidad de electrónica eficiente.  
-- **Robustez:** encapsulado IP contra humedad/polvo, resistencia mecánica y vandalismo.  
-- **Eficiencia:** pérdidas en rectificación y conversión.  
-- **Seguridad:** aislamiento eléctrico para evitar riesgos al usuario.  
-- **Coste y mantenimiento:** balance entre durabilidad y reemplazos periódicos.  
-- **Escalabilidad:** integración en redes de múltiples baldosas.  
-
----
-
-## 🚀 Carta de Oportunidad
-El proyecto ofrece un **doble impacto**:
-1. **Energético:** micro-generación para cargas de baja potencia en parques y espacios públicos.  
-2. **Social:** sensibilización sobre energías renovables y datos de tránsito peatonal para gestión urbana.  
-
-### Segmento de mercado objetivo
-- Gobiernos locales.  
-- Administraciones de parques y universidades.  
-- Centros recreativos y proyectos de sostenibilidad.  
-
-### Estrategia competitiva
-- **Diferenciación por innovación:** interacción directa usuario–energía (cada paso genera electricidad).  
-- **Aplicación educativa y social:** visibilidad inmediata del impacto de la energía renovable.  
-
----
-
-## 🏆 Comparación con otras oportunidades
-- **Baldosas piezoeléctricas (nuestro proyecto):**  
-  - Alta visibilidad, escalable y novedoso en el contexto local.  
-- **Bancos solares urbanos:** tecnología consolidada, pero menos innovadora.  
-- **Paraderos energéticos:** útiles, pero de mayor costo e intervención estructural.  
-
-👉 El prototipo de baldosa destaca por su **escala controlable**, **impacto directo en el usuario** y su rol como **innovación emergente**.  
-
----
-
-## 🌍 Misión del Proyecto
-Validar la **viabilidad técnica y social** de una baldosa piezoeléctrica modular para espacios públicos, demostrando que **cada paso puede transformarse en una acción directa hacia un futuro más limpio y consciente**.  
-
----
-
-## 👥 Autores
-- Juan Sebastián Hernández  
-- Juan Diego Rodríguez  
-- José David Álvarez  
-
----
-
-## 📌 Estado del Proyecto
-🔬 **Etapa:** Prototipo piloto (MVP)  
-📍 **Lugar de implementación:** Parques públicos y espacios recreativos  
-🎯 **Enfoque:** Innovación, sostenibilidad y educación ambiental
+export default tseslint.config([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```

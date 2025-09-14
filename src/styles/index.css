@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+/* Fuentes */
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+/* Theme */
+
+@theme {
+    --color-primary: #2ecc71; /* Verde esmeralda - sostenibilidad */
+    --color-primary-dark: #145a32; /* Verde oscuro - robustez tecnológica */
+    --color-accent: #f1c40f; /* Amarillo eléctrico - energía */
+    --color-accent-warm: #e67e22; /* Naranja cálido - dinamismo */
+    --color-info: #3498db; /* Azul cielo - conectividad */
+    --color-info-dark: #2c3e50; /* Azul oscuro - estabilidad */
+    --color-neutral-light: #ecf0f1; /* Gris claro - limpieza */
+    --color-neutral-dark: #1c1c1c; /* Negro carbón - contraste */
+}
+/* Custom styles */
+
+.bg-primary {
+    background-color: var(--color-primary);
+}
