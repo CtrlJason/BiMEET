@@ -1,5 +1,5 @@
 import MainLayout from "../layout/bimeet/MainLayout";
-import Dashboard from "../pages/bimeet/Dashboard";
+import Dashboard from "../pages/bimeet/home/Dashboard";
 
 const privateRoutes = [
     {

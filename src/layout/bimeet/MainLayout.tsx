@@ -1,7 +1,7 @@
 import { Outlet } from "react-router";
 
 // Components
-import Navbar from "../../components/layout/bimeet/navbar";
+import Navbar from "../../components/bimeet/layout/navbar";
 
 const MainLayout = () => {
     return (

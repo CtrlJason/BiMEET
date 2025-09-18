@@ -11,7 +11,7 @@ const navItems: NavItem[] = [
     {
         name: "Inicio",
         icon: <HomeIcon size={32} />,
-        to: "/",
+        to: "/dashboard",
     },
     {
         name: "Proximamente...",
@@ -29,7 +29,9 @@ const Navbar = () => {
                     alt="BiMEET"
                     className="w-[64px] h-[64px]"
                 /> */}
-                <p className="text-white text-2xl font-bold">BiMEET</p>
+                <Link to="/dashboard">
+                    <p className="text-white text-2xl font-bold">BiMEET</p>
+                </Link>
                 {navItems.map((item, index) => (
                     <Link
                         className="flex items-center rounded-lg hover:shadow-md p-2 transition-all duration-150 gap-2 font-medium text-white text-2xl"

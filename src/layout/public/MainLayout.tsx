@@ -1,13 +1,15 @@
 import { Outlet } from "react-router";
 
 // Components
-import Navbar from "../../components/layout/public/navbar";
+import Navbar from "../../components/public/layout/navbar";
 
 const MainLayout = () => {
     return (
         <>
             <Navbar />
-            <Outlet />
+            <main className="pt-16">
+                <Outlet />
+            </main>
         </>
     );
 };
