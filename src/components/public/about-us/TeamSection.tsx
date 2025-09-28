@@ -19,7 +19,7 @@ const TeamSection = () => {
                             key={idx}
                             className={`bg-gradient-to-br ${
                                 gradientColors[idx % gradientColors.length]
-                            } text-white rounded-lg p-8 shadow-lg flex flex-col items-center relative overflow-hidden group hover:scale-105 transition-all duration-300`}
+                            } text-white rounded-lg p-8 shadow-lg flex flex-col items-center relative overflow-hidden group hover:scale-105 transition-all duration-300 cursor-default`}
                         >
                             {member.photo ? (
                                 <img
