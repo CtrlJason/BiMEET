@@ -1,3 +1,5 @@
+import { Zap, Monitor, MapPin } from "lucide-react";
+
 const HeroSection = () => {
     return (
         <section className="bg-primary text-white py-20 px-4">
@@ -14,33 +16,36 @@ const HeroSection = () => {
                 </p>
                 <div className="grid md:grid-cols-3 gap-8 mt-12">
                     <div className="bg-white/10 shadow-md hover:shadow-lg transition-all cursor-default rounded-lg p-6">
+                        <div className="flex justify-center mb-4">
+                            <Zap className="w-12 h-12 text-white" />
+                        </div>
                         <h3 className="text-2xl font-semibold mb-3">
-                            {/* <-- Modificar aquí el título */}
                             Energía Renovable
                         </h3>
                         <p className="text-lg">
-                            {/* <-- Modificar aquí la descripción */}
                             Cada paso genera electricidad limpia a través de
                             elementos piezoeléctricos
                         </p>
                     </div>
                     <div className="bg-white/10 shadow-md hover:shadow-lg transition-all cursor-default rounded-lg p-6">
+                        <div className="flex justify-center mb-4">
+                            <Monitor className="w-12 h-12 text-white" />
+                        </div>
                         <h3 className="text-2xl font-semibold mb-3">
-                            {/* <-- Modificar aquí el título */}
                             Monitoreo Inteligente
                         </h3>
                         <p className="text-lg">
-                            {/* <-- Modificar aquí la descripción */}
                             Sistema de telemetría que registra pisadas y energía
                             generada en tiempo real
                         </p>
                     </div>
                     <div className="bg-white/10 shadow-md hover:shadow-lg transition-all cursor-default rounded-lg p-6">
+                        <div className="flex justify-center mb-4">
+                            <MapPin className="w-12 h-12 text-white" />
+                        </div>
                         <h3 className="text-2xl font-semibold mb-3">
-                            Espacios Públicos{" "}
-                            {/* <-- Modificar aquí el título */}
+                            Espacios Públicos
                         </h3>
-                        {/* <-- Modificar aquí la descripción */}
                         <p className="text-lg">
                             Diseñado para parques y áreas de alto tráfico
                             peatonal

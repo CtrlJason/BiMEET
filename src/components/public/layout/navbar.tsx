@@ -13,12 +13,12 @@ const navItems: NavItem[] = [
     {
         name: "Quienes Somos",
         icon: <UsersIcon size={32} />,
-        to: "#",
+        to: "/quienes-somos",
     },
     {
         name: "Contacto",
         icon: <MailIcon size={32} />,
-        to: "#",
+        to: "/contacto",
     },
 ];
 

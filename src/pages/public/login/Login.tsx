@@ -1,13 +1,8 @@
 import { useState, type ChangeEvent, type FormEvent } from "react";
-
-interface formProps {
-    name: string;
-    email: string;
-    password: string;
-}
+import type { FormProps } from "../../../types/auth/auth.ds";
 
 const Login = () => {
-    const [form, setForm] = useState<formProps>({
+    const [form, setForm] = useState<FormProps>({
         name: "",
         email: "",
         password: "",
