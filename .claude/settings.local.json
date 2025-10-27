@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cat:*)",
+      "Bash(find /c/Repositorios/BiMEET/client/src/components/bimeet/home/graphics -name \"*.tsx\" -exec bash -c 'echo \"\"=== $1 ===\"\" && head -30 \"\"$1\"\"' _ {} ;)",
+      "Bash(find:*)",
+      "Bash(git -C /c/Repositorios/BiMEET log --oneline)",
+      "Bash(npx prisma generate:*)",
+      "WebSearch",
+      "Bash(npm run build:*)",
+      "Bash(npm install:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
