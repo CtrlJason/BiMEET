@@ -16,7 +16,7 @@ export const team: TeamMemberProps[] = [
     {
         name: "José David Álvarez",
         role: "Ingeniero / Integrador",
-        photo: "https://img.pokemondb.net/sprites/scarlet-violet/normal/gengar.png",
+        photo: "jefe.JPG",
         bio: "Especialista en integración de sistemas y telemetría. Promotor de ciudades inteligentes.",
     },
 ];
