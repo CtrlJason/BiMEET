@@ -1,0 +1,11 @@
+// Modelo para registrar cada pisada individual
+model Pisada {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  fecha     String   // "2025-10-26"
+  hora      String   // "14:30:45"
+  timestamp DateTime @default(now())
+
+  @@map("pisadas")
+  @@index([fecha])
+  @@index([timestamp])
+}
