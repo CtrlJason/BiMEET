@@ -8,9 +8,9 @@ export declare class SensorController {
         success: boolean;
         message: string;
         data: {
-            id: string;
             fecha: string;
             hora: string;
+            id: string;
             timestamp: Date;
         };
     }>;
@@ -18,17 +18,17 @@ export declare class SensorController {
         success: boolean;
         message: string;
         data: {
-            id: string;
             fecha: string;
             hora: string;
+            id: string;
             timestamp: Date;
         };
     }>;
     getHistorial(page?: string, limit?: string, fecha?: string, fechaInicio?: string, fechaFin?: string, sortBy?: string, sortOrder?: 'asc' | 'desc'): Promise<{
         data: {
-            id: string;
             fecha: string;
             hora: string;
+            id: string;
             timestamp: Date;
         }[];
         pagination: {
@@ -46,9 +46,9 @@ export declare class SensorController {
         pisadasSemana: number;
         pisadasMes: number;
         ultimaPisada: {
-            id: string;
             fecha: string;
             hora: string;
+            id: string;
             timestamp: Date;
         } | null;
     }>;

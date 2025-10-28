@@ -20,28 +20,28 @@ export declare class PisadasRepository {
     private readonly logger;
     constructor(mongoService: MongoConfigService);
     create(data: PisadaCreateInput): Promise<{
-        id: string;
         fecha: string;
         hora: string;
+        id: string;
         timestamp: Date;
     }>;
     findManyPaginated(filter: PisadaFilter, pagination: PaginationParams): Promise<{
-        id: string;
         fecha: string;
         hora: string;
+        id: string;
         timestamp: Date;
     }[]>;
     count(filter?: PisadaFilter): Promise<number>;
     findByFecha(fecha: string): Promise<{
-        id: string;
         fecha: string;
         hora: string;
+        id: string;
         timestamp: Date;
     }[]>;
     findLatest(): Promise<{
-        id: string;
         fecha: string;
         hora: string;
+        id: string;
         timestamp: Date;
     } | null>;
     getTotalCount(): Promise<number>;

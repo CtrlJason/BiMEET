@@ -7,9 +7,9 @@ export declare class SensorService {
     private readonly logger;
     constructor(pisadasRepository: PisadasRepository, eventsGateway: EventsGateway);
     processSensorData(sensorData: SensorDataDto): Promise<{
-        id: string;
         fecha: string;
         hora: string;
+        id: string;
         timestamp: Date;
     }>;
     getPisadasPaginadas(params: {
@@ -22,9 +22,9 @@ export declare class SensorService {
         sortOrder?: 'asc' | 'desc';
     }): Promise<{
         data: {
-            id: string;
             fecha: string;
             hora: string;
+            id: string;
             timestamp: Date;
         }[];
         pagination: {
@@ -42,9 +42,9 @@ export declare class SensorService {
         pisadasSemana: number;
         pisadasMes: number;
         ultimaPisada: {
-            id: string;
             fecha: string;
             hora: string;
+            id: string;
             timestamp: Date;
         } | null;
     }>;
